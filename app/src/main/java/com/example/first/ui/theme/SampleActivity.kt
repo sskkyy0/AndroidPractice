@@ -22,13 +22,13 @@ class SampleActivity : ComponentActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent{
-            val scrollState= rememberScrollState() // ???
+            val scrollState= rememberScrollState() // 스크롤 정보를 기억해주는 객체
 
             LazyColumn(
                 modifier = Modifier.background(color = Color.Green)
                     .fillMaxWidth(),
 //                    .verticalScroll(scrollState) // 스크롤 뷰
-                contentPadding = PaddingValues(16.dp),
+                contentPadding = PaddingValues(16.dp), // 사방에 패딩 두르기
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
 //                for (i in 1..50)
